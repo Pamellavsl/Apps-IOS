@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "iluminadorCobre.jpeg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
