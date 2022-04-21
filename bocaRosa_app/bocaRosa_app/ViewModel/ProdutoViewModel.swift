@@ -25,6 +25,7 @@ class ProdutoViewModel {
         if (count%2 == 0) {
             print("entrei no primeiro if")
             produtos.sort{$0.nomeProduto < $1.nomeProduto}
+            
 
         }
         else {

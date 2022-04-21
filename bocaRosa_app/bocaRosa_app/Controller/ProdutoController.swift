@@ -11,6 +11,7 @@ class ProdutoController: UIViewController {
     
     private let viewModel: ProdutoViewModel = ProdutoViewModel()
     private var produtos: [Produtos] = []
+    var filterButton = UIBarButtonItem()
     
     //MARK: - Atributes
     @IBOutlet weak var tableView: UITableView!
@@ -38,12 +39,13 @@ class ProdutoController: UIViewController {
     }
     
     private func configureNavigationBar() {
-       let filterButton = UIBarButtonItem(image: UIImage.init(systemName: "slider.horizontal.3"), style: .plain, target: self, action: #selector(orderView))
+       filterButton = UIBarButtonItem(image: UIImage.init(systemName: "slider.horizontal.3"), style: .plain, target: self, action: #selector(orderView))
         filterButton.tintColor = .gray
         navigationItem.rightBarButtonItems = [filterButton]
     }
     
     @objc func orderView() {
+        filterButton.tintColor = .black
         viewModel.ordenarTableView()
         DispatchQueue.main.async { [self] in
             self.tableView.reloadData()
